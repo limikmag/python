@@ -30,6 +30,15 @@ def depth_of_tree(tree: Node):
             return 1 + depth_r_tree
 
 
+def diameter(tree: Node):
+    if tree is None:
+        return 0
+    tree_height = depth_of_tree(tree.left) + depth_of_tree(tree.right) + 1
+    diameter_left = diameter(tree.left)
+    diameter_right = diameter(tree.right)
+    return max(tree_height, max(diameter_left, diameter_right))
+
+
 def is_full_binary_tree(tree: Node) -> bool:
     """
     :param tree:

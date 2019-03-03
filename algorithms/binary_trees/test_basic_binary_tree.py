@@ -102,3 +102,22 @@ def test_binary_tree_depth():
     assert trees.depth_of_tree(binary_tree_5) == 3
     assert trees.depth_of_tree(binary_tree_6) == 1
 
+
+
+
+def test_binary_tree_diameter():
+    assert trees.diameter(binary_tree_6) == 1
+    assert trees.diameter(binary_tree_5) == 5
+    assert trees.diameter(binary_tree_2) == 0
+
+    binary_tree_7 = trees.Node("A")
+    binary_tree_7.left = trees.Node("B")
+    binary_tree_7.left.left = trees.Node("C")
+    binary_tree_7.left.right = trees.Node("D")
+    binary_tree_7.left.left.left = trees.Node("E")
+    binary_tree_7.left.left.left.left = trees.Node("F")
+    binary_tree_7.left.right.right = trees.Node("G")
+    binary_tree_7.left.right.right.right = trees.Node("H")
+
+    assert trees.diameter(binary_tree_7) == 7
+
