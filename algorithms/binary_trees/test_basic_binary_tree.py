@@ -1,5 +1,5 @@
 import pytest
-import trees.basic_binary_tree as trees
+import basic_binary_tree as trees
 
 in_order = ['D', 'B', 'E', 'A', 'F', 'C']
 pre_order = ['A', 'B', 'D', 'E', 'C', 'F']
